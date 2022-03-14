@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 if (spinner.getSelectedItem().toString().contentEquals("Metre")) {
                     Double numFloat = Double.parseDouble(number.getText().toString());
 
-                    Double cm = Math.round((numFloat*10)*100.0)/100.0;
+                    Double cm = Math.round((numFloat*100)*100.0)/100.0;
                     Double inch = Math.round((numFloat*39.37)*100.0)/100.0;
                     Double feet = Math.round((numFloat*3.28)*100.0)/100.0;
 
-                    values.setText(String.format(cm.toString(), "%02d") + " cm" +"\r\n\n" + inch + " inches" +"\r\n\n" + feet + " feet");
+                    values.setText(String.format("%.2f", cm) + " cm" +"\r\n\n" + String.format("%.2f",inch) + " inches" +"\r\n\n" + String.format("%.2f",feet) + " feet");
                 }
                 else{
                     Toast.makeText(MainActivity.this,"ERROR!",Toast.LENGTH_LONG).show();
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     Double kelvin = Math.round((numFloat+273.15)*100.0)/100.0;
                     Double fh = Math.round(((numFloat*9/5) + 32)*100.0)/100.0;
 
-                    values.setText(kelvin + " Kelvin" +"\r\n\n" + fh + " Fahrenheit");
+                    values.setText(String.format("%.2f",kelvin) + " Kelvin" +"\r\n\n" + String.format("%.2f",fh) + " Fahrenheit");
                 }
                 else{
                     Toast.makeText(MainActivity.this,"ERROR!",Toast.LENGTH_LONG).show();
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     Double ounce = Math.round((numFloat*35.27)*100.0)/100.0;
                     Double pound = Math.round((numFloat*2.205)*100.0)/100.0;
 
-                    values.setText(gram + " Gram" +"\r\n\n" + ounce + " Ounce(OZ)" + "\r\n\n" + pound + " Pound(lb)" );
+                    values.setText(String.format("%.2f",gram) + " Gram" +"\r\n\n" + String.format("%.2f",ounce) + " Ounce(OZ)" + "\r\n\n" + String.format("%.2f",pound) + " Pound(lb)" );
                 }
                 else{
                     Toast.makeText(MainActivity.this,"ERROR!",Toast.LENGTH_LONG).show();
