@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="mainHeading">Unit Converter!</string>
+    <string name="enterNumber">Enter Number</string>
+    <string name="newValues">values</string>
+    <string name="button_for_metre_measurements">Button for metre measurements</string>
+    <string name="button_for_different_temps">button for different temps</string>
+    <string name="button_for_different_weights">button for different weights</string>
+    <string-array name="Units">
+        <item>Metre</item>
+        <item>Celsius</item>
+        <item>Kilogram</item>
+    </string-array>
+</resources>

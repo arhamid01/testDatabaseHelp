@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinnerDropdown"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="467dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/measureButton"
+        android:layout_width="110dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="17dp"
+        android:contentDescription="@string/button_for_metre_measurements"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tmpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDropdown"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/measuring_tape"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/tmpButton"
+        android:layout_width="137dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/button_for_different_temps"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/weightButton"
+        app:layout_constraintStart_toEndOf="@+id/measureButton"
+        app:srcCompat="@drawable/temp"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <ImageButton
+        android:id="@+id/weightButton"
+        android:layout_width="117dp"
+        android:layout_height="113dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/button_for_different_weights"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tmpButton"
+        app:srcCompat="@drawable/weight2"
+        tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/unitConverterHead"
+        android:layout_width="303dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="54dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/mainHeading"
+        android:textAlignment="center"
+        android:textColor="#121111"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="321dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="@string/enterNumber"
+        app:layout_constraintBottom_toTopOf="@+id/weightButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerDropdown"
+        app:layout_constraintTop_toBottomOf="@+id/unitConverterHead" />
+
+    <TextView
+        android:id="@+id/newValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="203dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNumber" />
+
+</android.support.constraint.ConstraintLayout>
