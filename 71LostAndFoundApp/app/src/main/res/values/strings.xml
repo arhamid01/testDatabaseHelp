@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">7.1LostAndFoundApp</string>
+    <string name="createAdvert">Create Advert</string>
+    <string name="showItems">Show All Lost And Found Items</string>
+    <string name="postType">Post Type</string>
+</resources>
